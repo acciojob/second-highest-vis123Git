@@ -9,8 +9,8 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			arr.sort((a,b)=>return a-b);
-			return arr[1];
+			let newarr = arr.sort((a,b)=>return b-a);
+			return newarr[1];
 		}
 
 		function Main() {
