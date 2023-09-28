@@ -11,19 +11,27 @@
 		function secondHighest(arr) {
 			if(arr.length==0) return -Infinity
 			if(arr.length==1) return -Infinity
+
+			let unique = true;
+			let a = arr[0];
+			for (let i = 0; i < arr.length; i++) {
+				if(arr[i] != a) unique = false;
+			}
+
+			if(!unique) return -Infinity
 			let newarr = arr.sort((a,b)=>{return b-a});
 			return newarr[1];
 		}
 
-		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
-			}
-			alert(secondHighest(arr));
-		}
-		Main();
+		// function Main() {
+		// 	var n = prompt("Enter the number of elements");
+		// 	var arr = [];
+		// 	for (var i = 0; i < n; i++) {
+		// 		arr[i] = prompt("Enter element " + (i+1));
+		// 	}
+		// 	alert(secondHighest(arr));
+		// }
+		// Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
